@@ -1,0 +1,15 @@
+org/atomspace/core/Link.class
+org/atomspace/core/Atom.class
+org/atomspace/patterns/PatternMatcher.class
+org/atomspace/values/TruthValue.class
+org/atomspace/values/Value.class
+org/atomspace/core/Node.class
+org/atomspace/execution/ExecutionEngine.class
+org/atomspace/values/StreamValue.class
+org/atomspace/execution/ExecutionEngine$1.class
+org/atomspace/examples/Demo.class
+org/atomspace/values/StringValue.class
+org/atomspace/values/ValueType.class
+org/atomspace/core/AtomSpace.class
+org/atomspace/types/AtomType.class
+org/atomspace/values/FloatValue.class

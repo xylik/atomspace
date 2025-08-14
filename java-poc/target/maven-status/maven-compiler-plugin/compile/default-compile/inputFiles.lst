@@ -1,0 +1,14 @@
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/execution/ExecutionEngine.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/values/TruthValue.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/values/StringValue.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/values/StreamValue.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/core/Link.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/core/Atom.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/core/AtomSpace.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/examples/Demo.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/core/Node.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/values/Value.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/patterns/PatternMatcher.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/values/ValueType.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/types/AtomType.java
+/home/runner/work/atomspace/atomspace/java-poc/src/main/java/org/atomspace/values/FloatValue.java
