@@ -5,6 +5,7 @@ INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_BINARY_DIR})
 ADD_LIBRARY (foreign
 #	DatalogAST.cc
 	ForeignAST.cc
+	JavaAST.cc
 	SexprAST.cc
 )
 
@@ -24,6 +25,7 @@ INSTALL (TARGETS foreign EXPORT AtomSpaceTargets
 INSTALL (FILES
 	DatalogAST.h
 	ForeignAST.h
+	JavaAST.h
 	SexprAST.h
 	DESTINATION "include/opencog/atoms/foreign"
 )
