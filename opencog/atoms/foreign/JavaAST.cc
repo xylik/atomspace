@@ -22,6 +22,7 @@
  */
 
 #include "JavaAST.h"
+#include <opencog/atoms/base/StructuralIdentity.h>
 #include <sstream>
 #include <algorithm>
 
@@ -81,25 +82,15 @@ void JavaAST::parse(const std::string& java_code)
 /// Format: "J|<type>|<structure_hash>"
 std::string JavaAST::compute_structural_key() const
 {
-	std::stringstream ss;
-	ss << "J|" << nameserver().getTypeName(_type) << "|";
-	
-	if (_outgoing.empty()) {
-		// For leaf nodes, use the name content
-		ss << "LEAF|" << _name;
-	} else {
-		// For nodes with children, include arity and child keys
-		ss << "ARITY|" << _outgoing.size() << "|";
-		for (const Handle& child : _outgoing) {
-			if (JavaASTCast(child)) {
-				ss << JavaASTCast(child)->get_structural_key() << "|";
-			} else {
-				ss << child->id_to_string() << "|";
-			}
-		}
-	}
-	
-	return ss.str();
+    // Use the base StructuralIdentity system with Java-specific prefix
+    std::string base_key = StructuralIdentity::compute_link_key(this);
+    
+    // Replace "L|" with "J|" to distinguish Java AST from regular links
+    if (base_key.substr(0, 2) == "L|") {
+        return "J|" + base_key.substr(2);
+    }
+    
+    return base_key;
 }
 
 std::string JavaAST::get_structural_key() const
@@ -112,14 +103,7 @@ std::string JavaAST::get_structural_key() const
 ContentHash JavaAST::compute_hash() const
 {
 	std::string structural_key = compute_structural_key();
-	ContentHash hsh = std::hash<std::string>()(structural_key);
-	
-	// Links will always have the MSB set.
-	ContentHash mask = ((ContentHash) 1ULL) << (8*sizeof(ContentHash) - 1);
-	hsh |= mask;
-	
-	if (Handle::INVALID_HASH == hsh) hsh -= 1;
-	return hsh;
+	return StructuralIdentity::hash_from_structural_key(structural_key);
 }
 
 // ---------------------------------------------------------------
