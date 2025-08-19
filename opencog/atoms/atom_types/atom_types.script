@@ -1276,6 +1276,9 @@ JSON_AST <- FOREIGN_AST
 // AST for Python programs
 PYTHON_AST <- FOREIGN_AST
 
+// AST for Java programs  
+JAVA_AST <- FOREIGN_AST
+
 // ==============================================================
 // Assorted miscellaneous link types with an unclear future.
 // Some of these need to be moved to the URE.

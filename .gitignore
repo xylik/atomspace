@@ -99,3 +99,73 @@ Makefile
 
 # Vim #
 *.swp
+
+# Java #
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+# Maven #
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle #
+.gradle
+**/build/
+!src/**/build/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+.gradletasknamecache
+
+# IntelliJ IDEA #
+*.iws
+*.iml
+*.ipr
+.idea/
+out/
+
+# Visual Studio Code #
+.vscode/
+*.code-workspace
+.history/
+
+# NetBeans #
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# STS (Spring Tool Suite) #
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# JUnit/Surefire #
+TEST-*.xml
+**/surefire-reports/
+**/failsafe-reports/
+
+# Lombok #
+lombok.config
+
+# macOS #
+.DS_Store?
+.DS_Store
